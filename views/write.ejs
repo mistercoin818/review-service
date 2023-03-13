@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DAY4</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        input[type="text"]{
+            border:none;
+            background-color: white;
+            opacity: 0.6;
+            color: black;
+            font-size: 20px;
+            width: 300px;
+            margin: 10px 0;
+        }
+        .content{
+            border:none;
+            background-color: white;
+            opacity: 0.6;
+            color: black;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .likebutton{
+            width: 300px;
+            border:none;
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0.6;
+            cursor:pointer;
+            font-weight: bold;
+            margin: 10px 0;
+            position: bottom;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 style="color:black">학교 후기 작성하기</h1>
+    <div>
+        <form style="text-align: center;"action="/write/new" method="POST">
+            <b>작성자:</b><br>
+            <input type="text" name="username" placeholder="작성자">
+            <br>
+            <b>내용:</b><br>
+            <textarea class="content" name="message" placeholder="학교에 대해 얘기해주세요!" cols="30" rows="5"></textarea>
+            <!-- <input class ="content"type="text" name="message" placeholder="학교에 대해 얘기해주세요!"> -->
+            <br>
+            <input class="likebutton" type="submit" value="작성하기">
+        </form>
+    </div>
+  </body>
+</html>

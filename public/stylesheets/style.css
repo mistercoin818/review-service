@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+body{
+  background-image: linear-gradient(to right, #98c4fc, #d7c3fd);
+  height: 100vh;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card{
+  margin: 20px 20px;
+  border-radius: 10px;
+  height: 200px;
+  border: none;
+  background-color: white;
+  opacity: 0.6
+}

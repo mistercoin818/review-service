@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DAY4</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      .goWriting{
+        text-decoration: underline;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .likebutton{
+        width: 80%;
+        border:none;
+        border-radius: 5px;
+        background-color: pink;
+        cursor:pointer;
+        font-weight: bold;
+        position: bottom;
+      }
+      .formargin{
+        margin: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>성균관대학교 학우들의 이야기</h1>
+    <form action="/write" method="GET">
+      <input class="goWriting"type="submit" value="나도 쓰러 가기">
+    </form>
+    <div class="card-container">
+      <% for(let i = 0; i < len; i++){ %>
+        <div class ="card">
+          <div class="formargin"><b><%= Board[i].username %></b></div>
+          <br>
+          <div class="formargin"><b><%= Board[i].message %></b></div>
+          <br>
+          <div class="formargin"><b>좋아요 수: <%= Board[i].likes %></b></div>
+          <br>
+          <form style="text-align: center;" action="/likes/<%= i%>" method="POST">
+            <input class="likebutton" type="submit" value="좋아요">
+          </form>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
